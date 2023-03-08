@@ -7,6 +7,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js"></script>
@@ -17,7 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r99/three.min.js"></script> 
    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-<script src="//code.tidio.co/s5vkt4irnij98kluy78782eglskwbxxu.js" async></script>
+ {{!-- <script src="//code.tidio.co/s5vkt4irnij98kluy78782eglskwbxxu.js" async></script>  --}}
 
 
 
@@ -329,6 +331,9 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 {{>portfolio}}
 {{!--porfolio end--}}
 
+
+{{>testimonial}}
+
    {{!--maps--}}
 
    {{>maps}}
@@ -533,13 +538,262 @@ function startCounter() {
 </script>
 
 
+<script>
+  let navLinks = document.querySelectorAll(".carousel .nav-linkp")
+let slides = document.querySelectorAll(".carousel .slides img")
+let overlays = document.querySelectorAll(".carousel .bar")
+let maxZIndex = navLinks.length
+let easeInOutQuart = "cubic-bezier(0.77, 0, 0.175, 1)"
+slides[0].classList.add("active")
+navLinks[0].classList.add("active")
+navLinks.forEach((navLink, activeIndex) => {
+  overlays[activeIndex].style.zIndex = `${navLinks.length - activeIndex}`
+  navLink.addEventListener("click", () => {
+    // nav-link
+    navLinks.forEach(navLink => navLink.classList.remove("active"))
+    navLink.classList.add("active")
+    // slide
+    let currentSlide = document.querySelector(".carousel .slides img.active")
+    let slideFadeOut = currentSlide.animate(
+      [
+        { transform: "translateX(0)", opacity: 1 },
+        { transform: "translateX(5%)", opacity: 0 }
+      ],
+      {
+        duration: 600,
+        easing: "ease-in",
+        fill: "forwards"
+      }
+    )
+    slideFadeOut.onfinish = () => {
+      slides.forEach(slide => slide.classList.remove("active"))
+      let activeSlide = slides[activeIndex]
+      activeSlide.classList.add("active")
+      activeSlide.animate(
+        [
+          {
+            transform: "translateX(-5%)",
+            opacity: 0
+          },
+          {
+            transform: "translateX(0)",
+            opacity: 1
+          }
+        ],
+        { duration: 600, easing: "ease-out", fill: "forwards" }
+      )
+    }
+    // overlay
+    maxZIndex += 1
+    let activeOverlay = overlays[activeIndex]
+    activeOverlay.style.zIndex = `${maxZIndex}`
+    activeOverlay.animate(
+      [{ transform: "scaleX(0)" }, { transform: "scaleX(1)" }],
+      { duration: 1200, fill: "forwards", easing: easeInOutQuart }
+    )
+  })
+})
+
+
+</script>
 
 
 
+<script>
+  $(document).ready(function(){
+  $('.pp-quote').click(function(){
+    $('.pp-quote').removeClass("active");
+    $(this).addClass("active");
+});
+});
+
+$(document).ready(function(){
+    
+       // hide-top
+
+        $('.li-quote-1').click(function(e){ 
+            e.stopPropagation();
+            $(".show").addClass('hide-top');
+            $(".hide-top").removeClass('show');
+            $('.quote-text-1').addClass('show');
+            $('.quote-text-1').removeClass('hide-bottom');             
+        });
+
+        $('.li-quote-2').click(function(e){ 
+            e.stopPropagation();
+            $(".show").addClass('hide-top');
+            $(".hide-top").removeClass('show');
+            $('.quote-text-2').addClass('show');             
+            $('.quote-text-2').removeClass('hide-bottom');
+        });
+
+        $('.li-quote-3').click(function(e){ 
+            e.stopPropagation();
+            $(".show").addClass('hide-top');
+            $(".hide-top").removeClass('show');         
+            $('.quote-text-3').addClass('show');             
+            $('.quote-text-3').removeClass('hide-bottom');
+        });
+        $('.li-quote-4').click(function(e){ 
+            e.stopPropagation();
+            $(".show").addClass('hide-top');
+            $(".hide-top").removeClass('show');      
+            $('.quote-text-4').addClass('show');             
+            $('.quote-text-4').removeClass('hide-bottom');
+        });
+        $('.li-quote-5').click(function(e){ 
+            e.stopPropagation();
+            $(".show").addClass('hide-top');
+            $(".hide-top").removeClass('show');      
+            $('.quote-text-5').addClass('show');             
+            $('.quote-text-5').removeClass('hide-bottom');
+        });
+        $('.li-quote-6').click(function(e){ 
+            e.stopPropagation();
+            $(".show").addClass('hide-top');
+            $(".hide-top").removeClass('show');      
+            $('.quote-text-6').addClass('show');             
+            $('.quote-text-6').removeClass('hide-bottom');
+        });
+        $('.li-quote-7').click(function(e){ 
+            e.stopPropagation();
+            $(".show").addClass('hide-top');
+            $(".hide-top").removeClass('show');      
+            $('.quote-text-7').addClass('show');             
+            $('.quote-text-7').removeClass('hide-bottom');
+        });
+        $('.li-quote-8').click(function(e){ 
+            e.stopPropagation();
+            $(".show").addClass('hide-top');
+            $(".hide-top").removeClass('show');      
+            $('.quote-text-8').addClass('show');             
+            $('.quote-text-8').removeClass('hide-bottom');
+        });
+           
+    
+});
 
 
+$(document).ready(function(){
+    
+       // hide-top
 
+        $('.li-quote-1').click(function(e){ 
+            e.stopPropagation();
+            $(".look").addClass('hide-dp-top');
+            $(".hide-dp-top").removeClass('look');
+            $('.dp-name-1').addClass('look');
+            $('.dp-name-1').removeClass('hide-dp-bottom');             
+        });
 
+        $('.li-quote-2').click(function(e){ 
+            e.stopPropagation();
+            $(".look").addClass('hide-dp-top');
+            $(".hide-dp-top").removeClass('look');
+            $('.dp-name-2').addClass('look');
+            $('.dp-name-2').removeClass('hide-dp-bottom');             
+        });
+
+        $('.li-quote-3').click(function(e){ 
+            e.stopPropagation();
+            $(".look").addClass('hide-dp-top');
+            $(".hide-dp-top").removeClass('look');
+            $('.dp-name-3').addClass('look');
+            $('.dp-name-3').removeClass('hide-dp-bottom');             
+        });
+    $('.li-quote-4').click(function(e){ 
+            e.stopPropagation();
+            $(".look").addClass('hide-dp-top');
+            $(".hide-dp-top").removeClass('look');
+            $('.dp-name-4').addClass('look');
+            $('.dp-name-4').removeClass('hide-dp-bottom');             
+        });
+    
+        $('.li-quote-5').click(function(e){ 
+            e.stopPropagation();
+            $(".look").addClass('hide-dp-top');
+            $(".hide-dp-top").removeClass('look');
+            $('.dp-name-5').addClass('look');
+            $('.dp-name-5').removeClass('hide-dp-bottom');             
+        });
+    
+        $('.li-quote-6').click(function(e){ 
+            e.stopPropagation();
+            $(".look").addClass('hide-dp-top');
+            $(".hide-dp-top").removeClass('look');
+            $('.dp-name-6').addClass('look');
+            $('.dp-name-6').removeClass('hide-dp-bottom');             
+        });
+        $('.li-quote-7').click(function(e){ 
+            e.stopPropagation();
+            $(".look").addClass('hide-dp-top');
+            $(".hide-dp-top").removeClass('look');
+            $('.dp-name-7').addClass('look');
+            $('.dp-name-7').removeClass('hide-dp-bottom');             
+        });
+        $('.li-quote-8').click(function(e){ 
+            e.stopPropagation();
+            $(".look").addClass('hide-dp-top');
+            $(".hide-dp-top").removeClass('look');
+            $('.dp-name-8').addClass('look');
+            $('.dp-name-8').removeClass('hide-dp-bottom');             
+        });
+           
+    
+});
+</script>
+
+<script>
+  const slider = function () {
+  const slides = document.querySelectorAll('.slide');
+  const btnLeft = document.querySelector('.slider__btn--left');
+  const btnRight = document.querySelector('.slider__btn--right');
+
+  let curSlide = 0;
+  const maxSlide = slides.length;
+
+  const goToSlide = function (slide) {
+    slides.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
+
+  // Next slide
+  const nextSlide = function () {
+    if (curSlide === maxSlide - 1) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+
+    goToSlide(curSlide);
+  };
+
+  const prevSlide = function () {
+    if (curSlide === 0) {
+      curSlide = maxSlide - 1;
+    } else {
+      curSlide--;
+    }
+    goToSlide(curSlide);
+  };
+
+  const init = function () {
+    goToSlide(0);
+  };
+  init();
+
+  // Event handlers
+  btnRight.addEventListener('click', nextSlide);
+  btnLeft.addEventListener('click', prevSlide);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') prevSlide();
+    e.key === 'ArrowRight' && nextSlide();
+  });
+};
+slider();
+</script>
 
 </body>
  
