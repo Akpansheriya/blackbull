@@ -1,0 +1,103 @@
+<section>
+  <div class="modal fade bd-example-modal-lg" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Apply Now</h5><button type="button" class="btn-close"
+            data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <form method="POST" action="/upload" enctype="multipart/form-data"  class="row" >
+              <div class="col-md-6 mb-4 ">
+                <p class="form-p">First Name<sup>*</sup></p><input  oninput="this.setCustomValidity('')" required oninvalid="this.setCustomValidity('Enter Your FullName')" autocomplete="off" type="text" class="form-control new-form"
+                  name="firstName" value="">
+              </div>
+              <div class="col-md-6 mb-4 ">
+                <p class="form-p">Last Name<sup>*</sup></p><input autocomplete="off" type="text" class="form-control  new-form"
+                  name="lastName" value="">
+              </div>
+              <div class="col-md-6 mb-4 ">
+                <p class="form-p">Phone Number<sup>*</sup></p><input autocomplete="off" type="tel" class="form-control  new-form"
+                  name="phone" pattern="[0-9]{10}" required="" value="">
+              </div>
+              <div class="col-md-6 mb-4 ">
+                <p class="form-p">Email</p><input autocomplete="off" type="email" class="form-control  new-form" name="email"
+                  required="" value="">
+              </div>
+              <div class="col-md-6 mb-4 ">
+                <p class="form-p">Profile<sup>*</sup></p>
+                <div class=""><select class="new-form form-control" name="profile">
+                    <option value="">---</option>
+                    <option value="Experience">Experience</option>
+                    <option value="Fresher">Fresher</option>
+                  </select></div>
+              </div>
+              <div class="col-md-6 mb-4 ">
+                <p class="form-p">Apply For<sup>*</sup></p><select class="form-control  new-form" name="applyFor">
+                  <option>---</option>
+                  <option value="Flutter">Flutter Developer</option>
+                  <option value="android">Android Developer</option>
+                  <option value="wordpress">WordPress Developer</option>
+                  <option value="Node">NodeJs Developer</option>
+                  <option value="React">ReactJs Designer</option>
+                  <option value="Laravel">Laravel Developer</option>
+                  <option value="Angular">Angular Developer</option>
+                  <option value="React Native">React Native Developer</option>
+                  <option value="Ios">Ios Developer</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-4 ">
+                <p class="form-p">Experience Year<sup>*</sup></p><select class="form-control  new-form" name="experienceYear">
+                  <option>---</option>
+                  <option value="0 Year">0 Year</option>
+                  <option value="1 Year">1 Year</option>
+                  <option value="2 Year">2 Year</option>
+                  <option value="3 Year">3 Year</option>
+                  <option value="4 Year">4 Year</option>
+                  <option value="5 Year">5 Year</option>
+                  <option value="6 Year">6 Year</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-4 ">
+                <p class="form-p">Experience Month<sup>*</sup></p><select class="form-control  new-form" name="experienceMonth">
+                  <option>---</option>
+                  <option value="0 Month">0 Month</option>
+                  <option value="1 Month">1 Month</option>
+                  <option value="2 Month">2 Month</option>
+                  <option value="3 Month">3 Month</option>
+                  <option value="4 Month">4 Month</option>
+                  <option value="5 Month">5 Month</option>
+                  <option value="6 Month">6 Month</option>
+                  <option value="7 Month">7 Month</option>
+                  <option value="8 Month">8 Month</option>
+                  <option value="9 Month">9 Month</option>
+                  <option value="10 Month">10 Month</option>
+                  <option value="11 Month">11 Month</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-4 ">
+                <p class="form-p">Education<sup>*</sup></p><input autocomplete="off" type="text" class="form-control  new-form"
+                  name="education" value="">
+              </div>
+              <div class="col-md-6 mb-4">
+                <p class="form-p">Upload Resume<sup>*</sup></p><input id="file" autocomplete="off" type="file"
+                  class="form-control  new-form" name="resume">
+                <p class="error"></p>
+              </div>
+              <div class="col mb-4">
+                <p class="form-p">Details<sup>*</sup></p><textarea class="form-control details-area  new-form"
+                  name="detail"></textarea>
+              </div>
+              <div class="modal-footer">
+                <div class="btn btn_bg btn_close" data-bs-dismiss="modal">Close</div>
+                <div class="btn btn_bg"><input type="submit" class="sub-none"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

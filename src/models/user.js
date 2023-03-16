@@ -31,25 +31,7 @@ const UserSchema = mongoose.Schema({
         errorMessage: "Phone number cannot be empty"
         
     },
-    course : {
-
-        type:String,
-        // enum: ["Nodejs","Flutter","Laravel","Kotlin","Reactjs","Reactnative","IOS","Android"],
-        //  default:"Nodejs",
-        required:true,
-        trim:true
-        // required:true
-        // type:String,
-        // Flutter: String,
-        // Nodejs: String,
-        // Reactjs: String,
-        // Kotlin: String,
-        // reactnative:String,
-        // IOS: String,
-        // Android: String,
-        // Laravel: String,
-        //  required: true,
-    },
+    
      message : {
         type: String,
         trim:true,

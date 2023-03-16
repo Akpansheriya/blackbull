@@ -552,18 +552,12 @@ li.nav-item:hover {
 
 /* our services style starts  */
 
-/* new service */
-/* demo shizzle only */
+
 
 .mutter {
-  /* background-color:#000000; */
-  /* background: linear-gradient(
-    to right,
-    #333333 0%,
-    #333333 50%,
-    #F18E38 50%,
-    #F18E38 100%
-  ); */
+  background-color:#000000;
+  
+  
 
   width: 100%;
   border-radius: 150px;
@@ -5135,6 +5129,18 @@ h1.map-h1 {
   align-items: center;
 }
 
+.section-background {
+  background:#f18e38 ;
+  border-radius: 40px;
+  padding: 0 26px;
+}
+
+
+
+img.robot.section-upper{
+  background-color: #000;
+  border-radius: 20px;
+}
 
 .ag-courses_box {
   display: -webkit-box;
@@ -5152,7 +5158,7 @@ h1.map-h1 {
 .ag-courses_item {
   -ms-flex-preferred-size: calc(33.33333% - 30px);
   flex-basis: calc(33.33333% - 30px);
-
+width: 590px;
   margin: 0 15px 30px;
 
   overflow: hidden;
@@ -5321,14 +5327,14 @@ text-align: center;
   display: flex;
 }
 
-.carousel .slides {
+.carousel .slides-port {
   position: relative;
-  width: 50%;
-  top: -14em;
-  left: 10em;
+  width: 80%;
+  top: -24em;
+  left: 8em;
 }
 
-.carousel .slides img {
+.carousel .slides-port img {
   position: absolute;
   /* width: 450px;
   height: 450px; */
@@ -5336,14 +5342,14 @@ text-align: center;
   z-index: 50;
 }
 
-.carousel .slides img.active {
+.carousel .slides-port img.active {
   opacity: 1;
 }
 
 .carousel .overlays {
   position: absolute;
-  width: 36em;
-  height: 18em;
+  width: 52em;
+  height: 26em;
 }
 
 .carousel .overlays .bar {
@@ -5362,7 +5368,8 @@ text-align: center;
   justify-content: center;
   align-items: flex-start;
   margin: 0;
-  padding: 0 0 0 6em;
+ position: relative;
+ left: -20%;
   list-style-type: none;
   z-index: 51;
 }
@@ -5374,6 +5381,13 @@ text-align: center;
   text-decoration: none;
   color: #7f8c8d;
   transition: 0.3s;
+}
+
+.mobile-dev{
+  height: 100%;
+  width: 100%;
+  padding: 0 6px;
+  border-radius: 20px;
 }
 
 .carousel .nav-linksp .nav-linkp:hover {
@@ -5971,6 +5985,7 @@ width: 100%;
 .company-strip{
   background-color: #f18e38;
     padding: 0 5px;
+    margin: 0 20px;
     border-radius: 5px;
 }
 
@@ -5983,3 +5998,89 @@ img.mobile-logo {
     left: 25%;
     
 }
+
+.form-p {
+  color: #000;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  display: flex;
+  align-items: baseline;
+}
+
+
+.btn_bg {
+  background-color: #000 ;
+  color: #fff;
+ 
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 10px 40px;
+  
+  width: fit-content;
+}
+
+/* .btn_bg :hover{
+  color: #000;
+  background-color: #f18e38;
+  transition: all ease 0.6s;
+} */
+
+.new-form {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 9px rgb(0 0 0 / 3%);
+  font-size: 16px;
+  margin-bottom: 5px;
+  padding: 10px;
+  width: 100%;
+  height: 50px;
+}
+
+.sub-none {
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0;
+}
+.sub-none:hover {
+  background: none;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  padding: 0;
+}
+
+h5#staticBackdropLabel {
+  font-size: 24px;
+}
+
+
+input[type=file]::file-selector-button {
+  border: 2px solid #fff;
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color: #000;
+  color: #fff;
+  transition: 1s;
+  width: fit-content;
+}
+
+button.btn-career {
+  width: 100px;
+  padding: 8px 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+button.btn-career:hover {
+background-color: #f18e38;
+transition: all ease 0.6s;
+}
+
+.btn-career-main{
+  display: flex;
+  justify-content: center;
+}
+
