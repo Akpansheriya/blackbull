@@ -5334,7 +5334,12 @@ text-align: center;
     
     margin-left: -4%;
 }
-
+.body-con.aos-init.aos-animate {
+  position: relative;
+  padding: 10% 0%;
+  height: 140vh;
+  width: 100%;
+}
 .carousel .slides-port img {
   position: absolute;
   
