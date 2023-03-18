@@ -5330,26 +5330,28 @@ text-align: center;
 .carousel .slides-port {
   position: relative;
   width: 80%;
-  top: -24em;
-  left: 8em;
+  margin-top: -23%;
+    
+    margin-left: -4%;
 }
 
 .carousel .slides-port img {
   position: absolute;
-  /* width: 450px;
-  height: 450px; */
+  
   opacity: 0;
   z-index: 50;
 }
-
+.body-con.aos-init.aos-animate {
+  position: relative;
+}
 .carousel .slides-port img.active {
   opacity: 1;
 }
 
 .carousel .overlays {
   position: absolute;
-  width: 52em;
-  height: 26em;
+    width: 44%;
+    height: 120%;
 }
 
 .carousel .overlays .bar {
@@ -5369,7 +5371,7 @@ text-align: center;
   align-items: flex-start;
   margin: 0;
  position: relative;
- left: -20%;
+ margin-left: -23%;
   list-style-type: none;
   z-index: 51;
 }

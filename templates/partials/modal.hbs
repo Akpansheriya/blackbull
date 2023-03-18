@@ -1,6 +1,6 @@
 <section>
-  <div class="modal fade bd-example-modal-lg" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" style="display: none;" aria-hidden="true">
+  <div class="modal fade bd-example-modal-lg" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" style="display: none;" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -9,22 +9,23 @@
         </div>
         <div class="modal-body">
           <div>
-            <form method="POST" action="/upload" enctype="multipart/form-data"  class="row" >
+            <form method="POST" action="/upload" enctype="multipart/form-data" class="row">
               <div class="col-md-6 mb-4 ">
-                <p class="form-p">First Name<sup>*</sup></p><input  oninput="this.setCustomValidity('')" required oninvalid="this.setCustomValidity('Enter Your FullName')" autocomplete="off" type="text" class="form-control new-form"
-                  name="firstName" value="">
+                <p class="form-p">First Name<sup>*</sup></p><input oninput="this.setCustomValidity('')" required
+                  oninvalid="this.setCustomValidity('Enter Your FullName')" autocomplete="off" type="text"
+                  class="form-control new-form" name="firstName" value="">
               </div>
               <div class="col-md-6 mb-4 ">
-                <p class="form-p">Last Name<sup>*</sup></p><input autocomplete="off" type="text" class="form-control  new-form"
-                  name="lastName" value="">
+                <p class="form-p">Last Name<sup>*</sup></p><input autocomplete="off" type="text"
+                  class="form-control  new-form" name="lastName" value="">
               </div>
               <div class="col-md-6 mb-4 ">
-                <p class="form-p">Phone Number<sup>*</sup></p><input autocomplete="off" type="tel" class="form-control  new-form"
-                  name="phone" pattern="[0-9]{10}" required="" value="">
+                <p class="form-p">Phone Number<sup>*</sup></p><input autocomplete="off" type="tel"
+                  class="form-control  new-form" name="phone" pattern="[0-9]{10}" required="" value="">
               </div>
               <div class="col-md-6 mb-4 ">
-                <p class="form-p">Email</p><input autocomplete="off" type="email" class="form-control  new-form" name="email"
-                  required="" value="">
+                <p class="form-p">Email</p><input autocomplete="off" type="email" class="form-control  new-form"
+                  name="email" required="" value="">
               </div>
               <div class="col-md-6 mb-4 ">
                 <p class="form-p">Profile<sup>*</sup></p>
@@ -49,7 +50,8 @@
                 </select>
               </div>
               <div class="col-md-6 mb-4 ">
-                <p class="form-p">Experience Year<sup>*</sup></p><select class="form-control  new-form" name="experienceYear">
+                <p class="form-p">Experience Year<sup>*</sup></p><select class="form-control  new-form"
+                  name="experienceYear">
                   <option>---</option>
                   <option value="0 Year">0 Year</option>
                   <option value="1 Year">1 Year</option>
@@ -61,7 +63,8 @@
                 </select>
               </div>
               <div class="col-md-6 mb-4 ">
-                <p class="form-p">Experience Month<sup>*</sup></p><select class="form-control  new-form" name="experienceMonth">
+                <p class="form-p">Experience Month<sup>*</sup></p><select class="form-control  new-form"
+                  name="experienceMonth">
                   <option>---</option>
                   <option value="0 Month">0 Month</option>
                   <option value="1 Month">1 Month</option>
@@ -78,8 +81,8 @@
                 </select>
               </div>
               <div class="col-md-6 mb-4 ">
-                <p class="form-p">Education<sup>*</sup></p><input autocomplete="off" type="text" class="form-control  new-form"
-                  name="education" value="">
+                <p class="form-p">Education<sup>*</sup></p><input autocomplete="off" type="text"
+                  class="form-control  new-form" name="education" value="">
               </div>
               <div class="col-md-6 mb-4">
                 <p class="form-p">Upload Resume<sup>*</sup></p><input id="file" autocomplete="off" type="file"
