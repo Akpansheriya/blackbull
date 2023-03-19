@@ -5329,15 +5329,15 @@ text-align: center;
 
 .carousel .slides-port {
   position: relative;
-  width: 80%;
-  margin-top: -23%;
+  width: 100%;
+  margin-top: -26%;
     
     margin-left: -4%;
 }
 .body-con.aos-init.aos-animate {
   position: relative;
   padding: 10% 0%;
-  height: 140vh;
+  height: 120vh;
   width: 100%;
 }
 .carousel .slides-port img {
@@ -5355,7 +5355,7 @@ text-align: center;
 
 .carousel .overlays {
   position: absolute;
-    width: 44%;
+    width: 40%;
     height: 120%;
 }
 
@@ -5376,7 +5376,7 @@ text-align: center;
   align-items: flex-start;
   margin: 0;
  position: relative;
- margin-left: -23%;
+ margin-left: -30%;
   list-style-type: none;
   z-index: 51;
 }
